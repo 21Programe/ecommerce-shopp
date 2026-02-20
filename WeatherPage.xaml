@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InfoHubApp.WeatherPage"
+             Title="Previsão do Tempo">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        
+        <Entry x:Name="CityEntry" Placeholder="Digite a cidade (ex: São Paulo)" 
+               HorizontalTextAlignment="Center" FontSize="18" />
+
+        <Button Text="Consultar Clima" Clicked="OnGetWeatherClicked" 
+                BackgroundColor="#2196F3" TextColor="White" CornerRadius="10"/>
+
+        <Frame BackgroundColor="#F0F8FF" CornerRadius="15" HasShadow="True">
+<VerticalStackLayout Spacing="10" Padding="10">
+    <Label x:Name="CityLabel" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+    
+    <Label x:Name="TempLabel" FontSize="48" HorizontalOptions="Center" TextColor="#2196F3" /> 
+    
+    <Label x:Name="DescLabel" FontSize="18" HorizontalOptions="Center" />
+    <Label x:Name="HumidLabel" FontSize="14" HorizontalOptions="Center" />
+</VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>
